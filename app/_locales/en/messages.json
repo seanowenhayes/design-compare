@@ -1,0 +1,10 @@
+{
+    "appName": {
+        "message": "design compare",
+        "description": "The name of the application"
+    },
+    "appDescription": {
+        "message": "compare a design with a web app implementation",
+        "description": "The description of the application"
+    }
+}

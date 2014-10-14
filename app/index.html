@@ -1,0 +1,42 @@
+<!doctype html>
+<html ng-app="designCompare" ng-csp>
+<head>
+  <meta charset="utf-8">
+  <title>design compare</title>
+
+  <!-- build:css styles/vendor.css -->
+  <link rel="stylesheet" href="bower_components/famous-angular/dist/famous-angular.css">
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+</head>
+<body>
+<fa-app ng-controller="images">
+  <fa-surface fa-pipe-to="myEventHandler">
+    <sh-image-input></sh-image-input>
+  </fa-surface>
+  <fa-scroll-view>
+    <fa-modifier ng-repeat="image in images" fa-size="[100, 100]"
+                 fa-translate="[0, $index * 100, 0]">
+      <fa-image-surface fa-image-url="{{image}}"></fa-image-surface>
+    </fa-modifier>
+  </fa-scroll-view>
+</fa-app>
+<!-- build:js scripts/vendor.js -->
+
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/famous/dist/famous-global.js"></script>
+<script src="bower_components/famous-angular/dist/famous-angular.js"></script>
+<!-- bower:js -->
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js scripts/index.js -->
+<script src="scripts/index.js"></script>
+<!-- endbuild -->
+</body>
+</html>
